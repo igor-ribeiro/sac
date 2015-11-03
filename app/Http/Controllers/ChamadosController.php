@@ -86,7 +86,9 @@ class ChamadosController extends Controller {
             return response('Erro ao salvar o chamado', 400);
         }
 
-        return response('Chamado cadastrado com sucesso!', 200);
+
+
+        return response('Chamado cadastrado com sucesso! <a href="#/chamado/' . $chamado->id . '">Clique aqui</a> para ver o chamado.', 200);
     }
 
 }
