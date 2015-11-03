@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
-class DatabaseSeeder extends Seeder
+class PedidosSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,11 +12,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
-
-        $this->call(ClientesSeeder::class);
-        $this->call(PedidosSeeder::class);
-
-        Model::reguard();
+        for ($i = 1; $i < 6; $i++) {
+            DB::table('pedidos')->insert([
+                'id_cliente' => $i,
+            ]);
+        }
     }
 }
