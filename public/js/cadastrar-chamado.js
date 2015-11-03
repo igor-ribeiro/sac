@@ -54,6 +54,8 @@
         success: function (success) {
             this.clearInputs();
 
+            this.$form.parent().find('.alert').remove();
+
             var $success = $('<div></div>');
 
             $success.addClass('alert alert-success');
