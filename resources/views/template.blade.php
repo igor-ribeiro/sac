@@ -6,7 +6,7 @@
 
         <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="lib/ladda/dist/ladda.min.css">
+        <link rel="stylesheet" href="lib/ladda/dist/ladda-themeless.min.css">
         <link rel="stylesheet" href="css/app.css">
         <script>var URL = '{{ url() }}';</script>
     </head>
@@ -27,7 +27,9 @@
         </div>
 
         <script src="lib/jquery/dist/jquery.min.js"></script>
+        <script src="lib/ladda/dist/spin.min.js"></script>
         <script src="lib/ladda/dist/ladda.min.js"></script>
+        <script src="lib/ladda/dist/ladda.jquery.min.js"></script>
         <script src="js/cadastrar-chamado.js"></script>
     </body>
 </html>
