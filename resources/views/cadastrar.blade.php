@@ -6,29 +6,29 @@
 
     <form class="form" action="{{ route('cadastrar') }}" method="post">
         <div class="form-group col-md-6">
-            <label for="nome">Nome do Cliente</label>
-            <input class="form-control" type="text" name="nome" id="nome">
+            <label for="cliente-nome">Nome do Cliente</label>
+            <input class="form-control" type="text" name="cliente[nome]" id="cliente-nome">
         </div>
         <div class="form-group col-md-6">
-            <label for="email">E-mail</label>
-            <input class="form-control" type="email" name="email" id="email">
-        </div>
-
-        <div class="form-group col-md-6">
-            <label for="pedido">Nº Pedido</label>
-            <input class="form-control" type="text" name="pedido" id="pedido">
+            <label for="cliente-email">E-mail</label>
+            <input class="form-control" type="email" name="cliente[email]" id="cliente-email">
         </div>
         <div class="form-group col-md-6">
-            <label for="titulo">Título</label>
-            <input class="form-control" type="email" name="titulo" id="titulo">
+            <label for="pedido-numero">Nº Pedido</label>
+            <input class="form-control" type="text" name="pedido[numero]" id="pedido-numero">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="chamado-titulo">Título</label>
+            <input class="form-control" type="email" name="chamado[titulo]" id="chamado-titulo">
         </div>
         <div class="form-group col-md-12">
-            <label for="observacao">Observação</label>
-            <textarea class="form-control" name="observacao" id="observacao" rows="3"></textarea>
+            <label for="chamado-observacao">Observação</label>
+            <textarea class="form-control" name="chamado[observacao]" id="chamado-observacao" rows="3"></textarea>
         </div>
 
 
         <div class="form-group col-md-12">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input class="btn btn-success" type="submit" value="Cadastrar">
         </div>
     </form>
