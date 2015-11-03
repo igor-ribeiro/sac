@@ -12,9 +12,17 @@ class PedidosSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 1; $i < 6; $i++) {
+        $pedidos = [
+            '2 roupas vermelhas',
+            '3 sapatos masculinos',
+            '1 calça e 1 sapato feminino',
+            '1 camisa azul e 1 calça preta',
+            '2 calças feminas',
+        ];
+
+        foreach ($pedidos as $pedido) {
             DB::table('pedidos')->insert([
-                'id_cliente' => $i,
+                'descricao' => $pedido,
             ]);
         }
     }
