@@ -26,3 +26,8 @@ Route::group(['prefix' => '/cadastrar'], function () {
         'uses' => 'ChamadosController@postCadastrarChamado',
     ]);
 });
+
+Route::get('/chamado/{id}', [
+    'as'   => 'chamado',
+    'uses' => 'ChamadosController@getChamado',
+]);
