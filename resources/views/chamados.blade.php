@@ -17,7 +17,7 @@
                 @foreach ($chamados as $chamado)
                     <tr>
                         <td>{{ $chamado->pedido->id }}</td>
-                        <td>{{ $chamado->pedido->cliente->email }}</td>
+                        <td>{{ $chamado->cliente->email }}</td>
                         <td>{{ $chamado->titulo }}</td>
                     </tr>
                 @endforeach
