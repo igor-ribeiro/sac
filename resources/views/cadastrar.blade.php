@@ -19,7 +19,7 @@
         </div>
         <div class="form-group col-md-6">
             <label for="chamado-titulo">Título</label>
-            <input class="form-control" type="email" name="chamado[titulo]" id="chamado-titulo">
+            <input class="form-control" type="text" name="chamado[titulo]" id="chamado-titulo">
         </div>
         <div class="form-group col-md-12">
             <label for="chamado-observacao">Observação</label>
