@@ -10,8 +10,14 @@
         <table class="table table-striped table-hover">
             <thead>
                 <th></th>
-                <th>Nº Pedido</th>
-                <th>E-Mail</th>
+                <th>
+                    <a href="{{ $pedidoFiltro }}">Nº Pedido</a>
+                    <span class="glyphicon glyphicon-triangle-{{ $pedidoFiltroIcone }}"></span>
+                </th>
+                <th>
+                    <a href="{{ $emailFiltro }}">E-Mail</a>
+                    <span class="glyphicon glyphicon-triangle-{{ $emailFiltroIcone }}"></span>
+                </th>
                 <th>Título</th>
             </thead>
             <tbody>
