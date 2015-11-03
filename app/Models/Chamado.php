@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Chamado extends Model {
     protected $table = 'chamados';
-    protected $fillable = ['id_pedido', 'titulo', 'observacao'];
+    protected $fillable = ['id_pedido', 'titulo', 'observacao', 'id_cliente'];
 
     public function pedido()
     {
