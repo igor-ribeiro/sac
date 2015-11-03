@@ -13,8 +13,8 @@ class UpdatePedidosTableAddNomeAndRemoveIdCliente extends Migration
     public function up()
     {
         Schema::table('pedidos', function (Blueprint $table) {
-            $table->dropColumn('id_cliente');
             $table->dropForeign('pedidos_id_cliente_foreign');
+            $table->dropColumn('id_cliente');
 
             $table->string('descricao');
         });
