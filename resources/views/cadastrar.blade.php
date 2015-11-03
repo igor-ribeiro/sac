@@ -4,6 +4,14 @@
     <h1>Cadastrar</h1>
     <hr>
 
+    @if ($errors->count())
+        <div class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <p>{{ $error }}</p>
+            @endforeach
+        </div>
+    @endif
+
     <form class="form" action="{{ route('cadastrar') }}" method="post">
         <div class="form-group col-md-6">
             <label for="cliente-nome">Nome do Cliente</label>
