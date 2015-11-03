@@ -1,3 +1,9 @@
 .container {
-  max-width: 760px;
+    max-width: 760px;
+}
+
+.is-loading {
+    transition: opacity .5s;
+    pointer-events: none;
+    opacity: .5;
 }
