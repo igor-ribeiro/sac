@@ -12,7 +12,7 @@
         </div>
     @endif
 
-    <form class="form" action="{{ route('cadastrar') }}" method="post">
+    <form class="form js-cadastrar-chamado" action="{{ route('cadastrar') }}" method="post">
         <div class="form-group col-md-6">
             <label for="cliente-nome">Nome do Cliente</label>
             <input class="form-control" type="text" name="cliente[nome]" id="cliente-nome" value="{{ old('cliente.nome') }}">
@@ -33,7 +33,6 @@
             <label for="chamado-observacao">Observação</label>
             <textarea class="form-control" name="chamado[observacao]" id="chamado-observacao" rows="3">{{ old('chamado.observacao') }}</textarea>
         </div>
-
 
         <div class="form-group col-md-12">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
