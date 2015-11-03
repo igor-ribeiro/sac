@@ -15,4 +15,9 @@ class ChamadosController extends Controller {
             ->with('paginacao', $chamados->render());
     }
 
+    public function getCadastrarChamado()
+    {
+        return view('cadastrar');
+    }
+
 }
