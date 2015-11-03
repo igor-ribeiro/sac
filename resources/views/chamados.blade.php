@@ -23,7 +23,7 @@
             <tbody>
                 @foreach ($chamados as $chamado)
                     <tr>
-                        <td><a href="#/chamado/{{ $chamado->id }}" class="btn btn-default glyphicon glyphicon-search"></a></td>
+                        <td><a href="#/chamado/{{ $chamado->id }}" class="btn btn-default btn-xs glyphicon glyphicon-search"></a></td>
                         <td>{{ $chamado->pedido->id }}</td>
                         <td>{{ $chamado->cliente->email }}</td>
                         <td>{{ $chamado->titulo }}</td>
