@@ -15,3 +15,8 @@ Route::get('/', [
     'as'   => 'chamados',
     'uses' => 'ChamadosController@getChamados',
 ]);
+
+Route::get('/cadastrar', [
+    'as'   => 'cadastrar',
+    'uses' => 'ChamadosController@getCadastrarChamado',
+]);
