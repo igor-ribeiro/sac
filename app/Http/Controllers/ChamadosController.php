@@ -10,7 +10,7 @@ class ChamadosController extends Controller {
     {
         $chamados = Chamado::paginate(5);
 
-        return view('index')
+        return view('chamados')
             ->with('chamados', $chamados)
             ->with('paginacao', $chamados->render());
     }
