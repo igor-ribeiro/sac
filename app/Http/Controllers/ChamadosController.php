@@ -19,6 +19,27 @@ class ChamadosController extends Controller {
             ->with('paginacao', $chamados->render());
     }
 
+    public function getChamado($id)
+    {
+        $chamado = Chamado::findOrFail($id);
+
+        return response()->json([
+            'cliente' => [
+                'nome'  => $chamado->cliente->nome,
+                'email' => $chamado->cliente->email,
+            ],
+            'pedido' => [
+                'numero'    => $chamado->pedido->id,
+                'descricao' => $chamado->pedido->descricao,
+            ],
+            'chamado' => [
+                'numero'     => $chamado->id,
+                'titulo'     => $chamado->titulo,
+                'observacao' => $chamado->observacao,
+            ]
+        ]);
+    }
+
     public function getCadastrarChamado()
     {
         return view('cadastrar');
@@ -58,7 +79,7 @@ class ChamadosController extends Controller {
             'id_cliente' => $cliente->id,
             'id_pedido'  => $pedido->id,
             'titulo'     => $request->chamado['titulo'],
-            'observacao' => $request->chamado['observacao'],
+            'observacao' => nl2br($request->chamado['observacao']),
         ]);
 
         if (!$chamado->save()) {
