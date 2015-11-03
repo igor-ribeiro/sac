@@ -7,3 +7,7 @@
     pointer-events: none;
     opacity: .5;
 }
+
+.btn {
+    outline: none !important;
+}
