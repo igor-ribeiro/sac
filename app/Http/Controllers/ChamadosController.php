@@ -59,7 +59,7 @@ class ChamadosController extends Controller {
             ->join('pedidos', 'pedidos.id', '=', 'chamados.id_pedido')
             ->join('clientes', 'clientes.id', '=', 'chamados.id_cliente')
             ->orderby($orderby, $order)
-            ->paginate(3);
+            ->paginate(5);
 
         $paginacao = $chamados->appends([
             'orderby' => (isset($request['orderby'])) ? $request['orderby'] : 'pedido',
