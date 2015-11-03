@@ -23,5 +23,7 @@
         <div class="container">
             @yield('content')
         </div>
+
+        <script src="lib/jquery/dist/jquery.min.js"></script>
     </body>
 </html>
