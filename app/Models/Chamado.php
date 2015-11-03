@@ -10,6 +10,11 @@ class Chamado extends Model {
 
     public function pedido()
     {
-        $this->belongsTo('App\Models\Pedido', 'id_pedido', 'id');
+        return $this->belongsTo('App\Models\Pedido', 'id_pedido', 'id');
+    }
+
+    public function cliente()
+    {
+        return $this->belongsTo('App\Models\Cliente', 'id_cliente', 'id');
     }
 }
