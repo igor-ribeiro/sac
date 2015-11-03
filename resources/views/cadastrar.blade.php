@@ -41,6 +41,8 @@
         </div>
 
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <input class="btn btn-success" type="submit" value="Cadastrar">
+        <button type="submit" class="btn btn-success ladda-button" data-style="expand-left">
+            <span class="ladda-label">Cadastrar</span>
+        </button>
     </form>
 @stop
