@@ -26,10 +26,14 @@
             @yield('content')
         </div>
 
+        @include ('chamado')
+
         <script src="lib/jquery/dist/jquery.min.js"></script>
+        <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="lib/ladda/dist/spin.min.js"></script>
         <script src="lib/ladda/dist/ladda.min.js"></script>
         <script src="lib/ladda/dist/ladda.jquery.min.js"></script>
         <script src="js/cadastrar-chamado.js"></script>
+        <script src="js/ver-chamado.js"></script>
     </body>
 </html>
