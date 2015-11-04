@@ -1,0 +1,23 @@
+{
+  "name": "sac",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Igor Ribeiro <igor.ribeiro.plus@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/igor-ribeiro/sac",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "ladda": "~0.9.8"
+  }
+}

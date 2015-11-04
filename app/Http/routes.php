@@ -11,6 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [
+    'as'   => 'chamados',
+    'uses' => 'ChamadosController@getChamados',
+]);
+
+Route::group(['prefix' => '/cadastrar'], function () {
+    Route::get('/', [
+        'as'   => 'cadastrar',
+        'uses' => 'ChamadosController@getCadastrarChamado',
+    ]);
+
+    Route::post('/', [
+        'uses' => 'ChamadosController@postCadastrarChamado',
+    ]);
 });
+
+Route::get('/chamado/{id}', [
+    'as'   => 'chamado',
+    'uses' => 'ChamadosController@getChamado',
+]);

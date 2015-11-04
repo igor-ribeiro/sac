@@ -34,8 +34,8 @@ return [
     'different'            => 'The :attribute and :other must be different.',
     'digits'               => 'The :attribute must be :digits digits.',
     'digits_between'       => 'The :attribute must be between :min and :max digits.',
-    'email'                => 'The :attribute must be a valid email address.',
-    'exists'               => 'The selected :attribute is invalid.',
+    'email'                => 'O campo :attribute deve ser um e-mail válido.',
+    'exists'               => 'O :attribute não existe.',
     'filled'               => 'The :attribute field is required.',
     'image'                => 'The :attribute must be an image.',
     'in'                   => 'The selected :attribute is invalid.',
@@ -58,7 +58,7 @@ return [
     'not_in'               => 'The selected :attribute is invalid.',
     'numeric'              => 'The :attribute must be a number.',
     'regex'                => 'The :attribute format is invalid.',
-    'required'             => 'The :attribute field is required.',
+    'required'             => 'O campo :attribute é obrigatório',
     'required_if'          => 'The :attribute field is required when :other is :value.',
     'required_unless'      => 'The :attribute field is required unless :other is in :values.',
     'required_with'        => 'The :attribute field is required when :values is present.',
@@ -105,6 +105,18 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'cliente' => [
+            'nome'  => 'Nome',
+            'email' => 'E-mail',
+        ],
+        'pedido' => [
+            'numero' => 'Nº do Pedido',
+        ],
+        'chamado' => [
+            'titulo'     => 'Título',
+            'observacao' => 'Observação',
+        ],
+    ],
 
 ];
